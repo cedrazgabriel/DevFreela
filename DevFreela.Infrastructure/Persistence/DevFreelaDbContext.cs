@@ -29,5 +29,6 @@ namespace DevFreela.Infrastructure.Persistence
         public List<Project> Projects { get; set; }
         public List<User> Users { get; set; }
         public List<Skill> Skils { get; set; }
+        public List<ProjectComment>? ProjectComments { get; set; }
     }
 }
