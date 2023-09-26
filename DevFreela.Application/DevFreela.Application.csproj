@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <Compile Remove="ViewModels\NovaPasta\**" />
+    <EmbeddedResource Remove="ViewModels\NovaPasta\**" />
+    <None Remove="ViewModels\NovaPasta\**" />
   </ItemGroup>
 
   <ItemGroup>
