@@ -14,6 +14,7 @@ namespace DevFreela.Core.Entities
             Skills = new List<UserSkill>();
             OwnedProjects = new List<Project>();
             FreelanceProjects = new List<Project>();
+            Comments = new List<ProjectComment>();
         }
 
         public string? FullName { get; private set; }
