@@ -24,13 +24,6 @@ namespace DevFreela.Application.Services.Implementations
             return user.Id;
         }
 
-        public UserViewModel GetById(int id)
-        {
-            var user = _dbContext.Users.Where(u => u.Id == id).FirstOrDefault();
-
-            var userModel = new UserViewModel(user.FullName, user.Active, user.Skills, user.OwnedProjects, user.FreelanceProjects);
-
-            return userModel;
-        }
+       
     }
 }
