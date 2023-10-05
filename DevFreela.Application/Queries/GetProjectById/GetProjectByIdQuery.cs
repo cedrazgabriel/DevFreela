@@ -1,4 +1,6 @@
 ﻿using DevFreela.Application.InputModels;
+using DevFreela.Core.DTO;
+using DevFreela.Core.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DevFreela.Application.Queries.GetProjectById
 {
-    public class GetProjectByIdQuery : IRequest<ProjectDetailsViewModel>
+    public class GetProjectByIdQuery : IRequest<Project>
     {
         public GetProjectByIdQuery(int id)
         {
