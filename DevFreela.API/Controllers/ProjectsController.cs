@@ -28,6 +28,16 @@ namespace DevFreela.API.Controllers
         [HttpGet]
         public async Task<IActionResult> Get(string query)
         {
+            if (!ModelState.IsValid)
+            {
+                var messages = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+                
+                return BadRequest(messages);
+            }
+            
             var projectQuery = new GetAllProjectsQuery(query);
             var projects = await _mediator.Send(projectQuery);
             return Ok(projects);
@@ -51,7 +61,11 @@ namespace DevFreela.API.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var messages = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                var messages = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+                
                 return BadRequest(messages);
             }
 
