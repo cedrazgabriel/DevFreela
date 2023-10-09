@@ -24,4 +24,20 @@
       <ProjectReference Include="..\DevFreela.Infrastructure\DevFreela.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Models\**" />
+    </ItemGroup>
+
 </Project>

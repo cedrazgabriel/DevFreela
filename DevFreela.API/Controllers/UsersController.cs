@@ -1,4 +1,4 @@
-﻿using DevFreela.API.Models;
+﻿
 using DevFreela.Application.Commands.CreateUser;
 using DevFreela.Application.InputModels;
 using DevFreela.Application.Queries.GetUser;
@@ -39,7 +39,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost("{id}/login")]
-        public IActionResult Login(int id, [FromBody] LoginModel loginModel)
+        public IActionResult Login(int id)
         {
             return NoContent();
         }
