@@ -30,9 +30,17 @@ namespace DevFreela.Infrastructure.Persistence.Repositories
         {
             var user = await _dbContext.Users.Where(u => u.Id == id).FirstOrDefaultAsync();
 
-            var userModel = new UserDTO(user.FullName, user.Active, user.Skills, user.OwnedProjects, user.FreelanceProjects);
+            var userModel = new UserDTO(user.FullName, user.Active, user.Skills, user.OwnedProjects,
+                user.FreelanceProjects);
 
             return userModel;
+        }
+
+        public async Task<User> GetUserByEmailAndPasswordAsync(string email, string passwordHash)
+        {
+            var user = await _dbContext.Users.SingleOrDefaultAsync(u => u.Email == email && u.Password == passwordHash);
+
+            return user;
         }
     }
 }
