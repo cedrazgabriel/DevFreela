@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.Application", "DevFreela.Application\DevFreela.Application.csproj", "{3B51105C-DE76-4836-A39F-37B78FB0F11F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFreela.UnitTests", "DevFreela.UnitTests\DevFreela.UnitTests.csproj", "{387DCA5F-B2C3-4552-87B1-0864F68C1505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.UnitTests", "DevFreela.UnitTests\DevFreela.UnitTests.csproj", "{387DCA5F-B2C3-4552-87B1-0864F68C1505}"
+	ProjectSection(ProjectDependencies) = postProject
+		{10EB764D-FD09-4DF0-8B96-2111A72A5D20} = {10EB764D-FD09-4DF0-8B96-2111A72A5D20}
+		{3B51105C-DE76-4836-A39F-37B78FB0F11F} = {3B51105C-DE76-4836-A39F-37B78FB0F11F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
