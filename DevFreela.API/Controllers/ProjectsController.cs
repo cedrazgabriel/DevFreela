@@ -63,9 +63,9 @@ namespace DevFreela.API.Controllers
         [Authorize(Roles = "client")]
         public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
-            var id = await _mediator.Send(command);
+            var idProject = await _mediator.Send(command);
     
-            return CreatedAtAction(nameof(GetById), id , command);
+            return CreatedAtAction(nameof(GetById), new{ id = idProject } , command);
         }
 
         [HttpPut("{id}")]
